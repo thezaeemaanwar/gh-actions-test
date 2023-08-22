@@ -1,0 +1,14 @@
+name: Update Review Team
+
+on:
+  pull_request:
+    types:
+      - opened
+
+jobs:
+  update_review_team:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mention @my-team
+        run: echo "Hey @thezaeemaanwar! There's a new pull request (#${{ github.event.pull_request.number }})"
+     
